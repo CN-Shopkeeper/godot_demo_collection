@@ -10,3 +10,6 @@
 
 ### 0003_top-down-player-movement-with-animations
 ![0003_top-down-player-movement-with-animations](0003.gif)
+
+### 0004_curves
+![0004_curves](0004.gif)

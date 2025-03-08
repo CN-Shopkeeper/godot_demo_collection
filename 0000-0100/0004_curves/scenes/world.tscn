@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdhai1k0otxsb"]
+
+[ext_resource type="PackedScene" uid="uid://boxppms4bj0gg" path="res://0000-0100/0004_curves/scenes/curve_example.tscn" id="1_k0f03"]
+[ext_resource type="Script" uid="uid://clphi6l501mym" path="res://0000-0100/0004_curves/scripts/path_follow2d.gd" id="2_yhvr2"]
+[ext_resource type="Texture2D" uid="uid://3vexc3a5frf2" path="res://icon.svg" id="3_fym1i"]
+[ext_resource type="Script" uid="uid://duuapl3fq4cyj" path="res://0000-0100/0004_curves/scripts/path_follow3d.gd" id="4_fym1i"]
+
+[sub_resource type="Curve2D" id="Curve2D_yhvr2"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(-26, -27, 26, 32, 46.4558, -36.1818, 0, 0, 0, 0, 49.3028, 59.0933, 0, 0, 0, 0, 4.55529, 115.615, 3.98253, 15.4248, -3.98253, -15.4248, -42, 67, -20, 10, 20, 10, -36.9626, -8.61622, -12.4824, 0, 12.4824, 0, -3.84197, -32.1674, -9.59985, 0.712422, 9.59985, -0.712422, 13.0505, -22.8004, 0, 0, 0, 0, 46.4558, -36.1818)
+}
+point_count = 8
+
+[sub_resource type="Curve3D" id="Curve3D_fikqt"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.623355, 0.779984, -2.42571, 0, 0, 0, 0, 0, 0, 2.13641, 0.359751, -3.7125, 0, 0, 0, 0, 0, 0, 6.6428, -1.82541, 0.0492659, 0, 0, 0, 0, 0, 0, 2.92631, -4.91967, 3.56059, 0, 0, 0, 0, 0, 0, -0.0122623, -3.71729, 4.43219, 0, 0, 0, 0, 0, 0, -2.44947, -2.5385, 4.65637, 0, 0, 0, 0, 0, 0, -1.93967, 0.639747, 0.714519, 0, 0, 0, 0, 0, 0, -0.539724, 1.59741, -1.48821),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 8
+
+[sub_resource type="SphereMesh" id="SphereMesh_fym1i"]
+
+[node name="World" type="Node"]
+
+[node name="CurveExample" parent="." instance=ExtResource("1_k0f03")]
+visible = false
+position = Vector2(98.1943, 22.0164)
+factor = 100
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(576, 184)
+scale = Vector2(10.5372, 3.73655)
+curve = SubResource("Curve2D_yhvr2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-34.9232, 78.8608)
+rotation = -2.25242
+progress = 225.096
+script = ExtResource("2_yhvr2")
+process = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_fym1i")
+region_rect = Rect2(0, 100, 0, 100)
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_fikqt")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.400361, 0.186506, 0.897137, 0.877761, 0.202805, -0.433913, -0.262876, 0.961229, -0.0825209, -0.178296, -3.63699, 4.44746)
+progress = 17.7514
+script = ExtResource("4_fym1i")
+process = true
+factor = 10
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
+mesh = SubResource("SphereMesh_fym1i")
