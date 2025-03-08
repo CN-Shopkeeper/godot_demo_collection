@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhgxt7ki8ga3i"]
+
+[ext_resource type="Texture2D" uid="uid://d2jpywefskdjo" path="res://0000_0100/0001_parallax-variation/assets/1.png" id="1_fyqo2"]
+[ext_resource type="Script" uid="uid://d13innaekiv0p" path="res://0000_0100/0001_parallax-variation/scripts/scroll_controller.gd" id="2_127qf"]
+[ext_resource type="Texture2D" uid="uid://de6x4i37sgah" path="res://0000_0100/0001_parallax-variation/assets/2.png" id="2_ru214"]
+[ext_resource type="Texture2D" uid="uid://5jp24pbiuhnj" path="res://0000_0100/0001_parallax-variation/assets/3.png" id="3_yj3sw"]
+
+[sub_resource type="Environment" id="Environment_ru214"]
+background_mode = 3
+adjustment_enabled = true
+adjustment_brightness = 0.75
+adjustment_contrast = 1.34
+adjustment_saturation = 0.85
+
+[node name="ParallaxVariation" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ru214")
+
+[node name="MyParallax" type="Node2D" parent="."]
+
+[node name="Parallax2D" type="Parallax2D" parent="MyParallax"]
+scale = Vector2(2, 2)
+scroll_scale = Vector2(0.1, 0)
+repeat_size = Vector2(576, 0)
+
+[node name="Ocean" type="Sprite2D" parent="MyParallax/Parallax2D"]
+position = Vector2(283, 163)
+texture = ExtResource("1_fyqo2")
+
+[node name="Parallax2D2" type="Parallax2D" parent="MyParallax"]
+scale = Vector2(2, 2)
+scroll_scale = Vector2(2.6, 0)
+repeat_size = Vector2(576, 0)
+
+[node name="Mist" type="Sprite2D" parent="MyParallax/Parallax2D2"]
+position = Vector2(283, 163)
+texture = ExtResource("2_ru214")
+
+[node name="Parallax2D3" type="Parallax2D" parent="MyParallax"]
+scale = Vector2(2, 2)
+scroll_scale = Vector2(1, 0)
+repeat_size = Vector2(576, 0)
+
+[node name="Clouds" type="Sprite2D" parent="MyParallax/Parallax2D3"]
+position = Vector2(283, 163)
+texture = ExtResource("3_yj3sw")
+
+[node name="ScrollController" type="Node2D" parent="."]
+script = ExtResource("2_127qf")
+
+[node name="Camera2D" type="Camera2D" parent="ScrollController"]
+position_smoothing_enabled = true
