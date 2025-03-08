@@ -50,4 +50,5 @@ texture = ExtResource("3_yj3sw")
 script = ExtResource("2_127qf")
 
 [node name="Camera2D" type="Camera2D" parent="ScrollController"]
+offset = Vector2(576, 324)
 position_smoothing_enabled = true
