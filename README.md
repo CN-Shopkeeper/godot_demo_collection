@@ -4,4 +4,4 @@
 
 ### 效果展示
 
-- [0001_0100](screenshots/results_show-0001_0100.md)
+- [0001-0100](screenshots/results-show_0001-0100.md)

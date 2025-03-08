@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhgxt7ki8ga3i"]
 
-[ext_resource type="Texture2D" uid="uid://d2jpywefskdjo" path="res://0000_0100/0001_parallax-variation/assets/1.png" id="1_fyqo2"]
-[ext_resource type="Script" uid="uid://d13innaekiv0p" path="res://0000_0100/0001_parallax-variation/scripts/scroll_controller.gd" id="2_127qf"]
-[ext_resource type="Texture2D" uid="uid://de6x4i37sgah" path="res://0000_0100/0001_parallax-variation/assets/2.png" id="2_ru214"]
-[ext_resource type="Texture2D" uid="uid://5jp24pbiuhnj" path="res://0000_0100/0001_parallax-variation/assets/3.png" id="3_yj3sw"]
+[ext_resource type="Texture2D" uid="uid://d2jpywefskdjo" path="res://0000-0100/0001_parallax-variation/assets/1.png" id="1_fyqo2"]
+[ext_resource type="Script" uid="uid://d13innaekiv0p" path="res://0000-0100/0001_parallax-variation/scripts/scroll_controller.gd" id="2_127qf"]
+[ext_resource type="Texture2D" uid="uid://de6x4i37sgah" path="res://0000-0100/0001_parallax-variation/assets/2.png" id="2_ru214"]
+[ext_resource type="Texture2D" uid="uid://5jp24pbiuhnj" path="res://0000-0100/0001_parallax-variation/assets/3.png" id="3_yj3sw"]
 
 [sub_resource type="Environment" id="Environment_ru214"]
 background_mode = 3

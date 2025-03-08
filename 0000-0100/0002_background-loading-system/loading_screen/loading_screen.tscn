@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bgau2vgc75j4j"]
 
-[ext_resource type="Script" uid="uid://c3ddbmbvr28re" path="res://0000_0100/0002_background-loading-system/loading_screen/loading_screen.gd" id="1_k2vfm"]
+[ext_resource type="Script" uid="uid://c3ddbmbvr28re" path="res://0000-0100/0002_background-loading-system/loading_screen/loading_screen.gd" id="1_k2vfm"]
 
 [sub_resource type="Animation" id="Animation_heohk"]
 length = 0.001
