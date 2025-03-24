@@ -1,0 +1,273 @@
+[gd_scene load_steps=57 format=3 uid="uid://bjj82phfyvmko"]
+
+[ext_resource type="Script" uid="uid://dbiogyo8sy0gn" path="res://demo_projects/moon-graveyard_platform-jump/scene/role/ranger/ranger.gd" id="1_fo80h"]
+[ext_resource type="Texture2D" uid="uid://b3s7l4yoidjuy" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_1.png" id="2_cuufi"]
+[ext_resource type="Texture2D" uid="uid://0pe7oh7xlbcy" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_2.png" id="3_v3l0y"]
+[ext_resource type="Texture2D" uid="uid://c0kx3aaaqxn0q" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_3.png" id="4_3e0jf"]
+[ext_resource type="Texture2D" uid="uid://e0qdl6kexch1" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_4.png" id="5_ccmrp"]
+[ext_resource type="Texture2D" uid="uid://b1ylvtl4fdbid" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_5.png" id="6_o8g6u"]
+[ext_resource type="Texture2D" uid="uid://cs3clchymsacf" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_6.png" id="7_ecaj2"]
+[ext_resource type="Texture2D" uid="uid://8fy3ijhwc35c" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_7.png" id="8_scxvx"]
+[ext_resource type="Texture2D" uid="uid://cbpx5gqtmr8h6" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_8.png" id="9_13rfx"]
+[ext_resource type="Texture2D" uid="uid://hwl1e5f5m2r5" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_9.png" id="10_pf7f3"]
+[ext_resource type="Texture2D" uid="uid://bmllxwgg03pfv" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_10.png" id="11_rhwob"]
+[ext_resource type="Texture2D" uid="uid://dyrrbrqgfbtl0" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_11.png" id="12_6b22e"]
+[ext_resource type="Texture2D" uid="uid://c5g5h833haejc" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_12.png" id="13_my7c7"]
+[ext_resource type="Texture2D" uid="uid://bg0iv3svsquvv" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_13.png" id="14_ln7pj"]
+[ext_resource type="Texture2D" uid="uid://6gkbrx0tfim7" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_14.png" id="15_vu1c0"]
+[ext_resource type="Texture2D" uid="uid://gwwdfouh4s1u" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/2_atk/2_atk_15.png" id="16_ii3wc"]
+[ext_resource type="Texture2D" uid="uid://bk0jfa3geuicl" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_1.png" id="17_odfeu"]
+[ext_resource type="Texture2D" uid="uid://6ntyq5irsbrf" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_2.png" id="18_3thkk"]
+[ext_resource type="Texture2D" uid="uid://dr8h4mtdvliek" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_3.png" id="19_2rrid"]
+[ext_resource type="Texture2D" uid="uid://dtmawigmjdsqb" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_4.png" id="20_anu8b"]
+[ext_resource type="Texture2D" uid="uid://bqyqqjs7ud00u" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_5.png" id="21_e50r7"]
+[ext_resource type="Texture2D" uid="uid://pm73eg5np3c8" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_6.png" id="22_3frga"]
+[ext_resource type="Texture2D" uid="uid://cmpwifxoaymp2" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_7.png" id="23_usrmr"]
+[ext_resource type="Texture2D" uid="uid://dc6j6m0d2esjm" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_8.png" id="24_u8wgy"]
+[ext_resource type="Texture2D" uid="uid://pmhxssb86261" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_9.png" id="25_3b6y1"]
+[ext_resource type="Texture2D" uid="uid://d17rb2tupmvh2" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_10.png" id="26_ma3tv"]
+[ext_resource type="Texture2D" uid="uid://bxxvld525ie7s" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_11.png" id="27_sas1i"]
+[ext_resource type="Texture2D" uid="uid://crosxpvrgmfd2" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_12.png" id="28_gtokc"]
+[ext_resource type="Texture2D" uid="uid://doxv2b06bbpok" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_13.png" id="29_ww07k"]
+[ext_resource type="Texture2D" uid="uid://k2p3a7hknuk8" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_14.png" id="30_8ge45"]
+[ext_resource type="Texture2D" uid="uid://3hpmmirevl5p" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_15.png" id="31_nkq8d"]
+[ext_resource type="Texture2D" uid="uid://dwjco7gurdsfo" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_16.png" id="32_och35"]
+[ext_resource type="Texture2D" uid="uid://oi11c2k7qk10" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_17.png" id="33_nuoiy"]
+[ext_resource type="Texture2D" uid="uid://bhrooff26lv7t" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_18.png" id="34_y18t0"]
+[ext_resource type="Texture2D" uid="uid://id5vrudgsq1e" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/death/death_19.png" id="35_rx58u"]
+[ext_resource type="Texture2D" uid="uid://lyyfk5pxdjwg" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_1.png" id="36_mumht"]
+[ext_resource type="Texture2D" uid="uid://jvnssrvtikmk" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_2.png" id="37_cvlkb"]
+[ext_resource type="Texture2D" uid="uid://kdd0jloha1a3" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_3.png" id="38_i6tu6"]
+[ext_resource type="Texture2D" uid="uid://d2vnkgwxtcidv" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_4.png" id="39_vatka"]
+[ext_resource type="Texture2D" uid="uid://c2imhusadd0sn" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_5.png" id="40_tb0mo"]
+[ext_resource type="Texture2D" uid="uid://dmqa01n2byak3" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_6.png" id="41_6xt7b"]
+[ext_resource type="Texture2D" uid="uid://bjju32vymp4w0" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_7.png" id="42_efrpn"]
+[ext_resource type="Texture2D" uid="uid://d07tmrshnrgw6" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_8.png" id="43_ssekr"]
+[ext_resource type="Texture2D" uid="uid://doakb7y6h1oil" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_9.png" id="44_hwn58"]
+[ext_resource type="Texture2D" uid="uid://b1cn8ssy1ltxq" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/run/run_10.png" id="45_3h60q"]
+[ext_resource type="Texture2D" uid="uid://bmqm300ds340s" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/take_hit/take_hit_1.png" id="46_7bdm5"]
+[ext_resource type="Texture2D" uid="uid://ce1d5hqyblgc7" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/take_hit/take_hit_2.png" id="47_ors3g"]
+[ext_resource type="Texture2D" uid="uid://g12fg7pcq0g8" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/take_hit/take_hit_3.png" id="48_knswh"]
+[ext_resource type="Texture2D" uid="uid://5n2qrw5vo68o" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/take_hit/take_hit_4.png" id="49_2t34h"]
+[ext_resource type="Texture2D" uid="uid://bbeipgmfp8rtw" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/take_hit/take_hit_5.png" id="50_8m33e"]
+[ext_resource type="Texture2D" uid="uid://b1gop66baypu5" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/take_hit/take_hit_6.png" id="51_hqw1n"]
+[ext_resource type="Script" uid="uid://crhf0xwxkx64d" path="res://demo_projects/moon-graveyard_platform-jump/script/state-manager.gd" id="52_v3l0y"]
+[ext_resource type="Script" uid="uid://cyc883bhe55nt" path="res://demo_projects/moon-graveyard_platform-jump/scene/role/ranger/state-machine/state-run.gd" id="53_3e0jf"]
+[ext_resource type="Script" uid="uid://c8boid7k83ktu" path="res://demo_projects/moon-graveyard_platform-jump/scene/role/ranger/state-machine/state-attack.gd" id="54_3e0jf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u8n2i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cuufi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v3l0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3e0jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ccmrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o8g6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ecaj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_scxvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_13rfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pf7f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rhwob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6b22e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_my7c7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ln7pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vu1c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ii3wc")
+}],
+"loop": false,
+"name": &"2_atk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_odfeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3thkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2rrid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_anu8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_e50r7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3frga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_usrmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u8wgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3b6y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ma3tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_sas1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_gtokc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ww07k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_8ge45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_nkq8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_och35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_nuoiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_y18t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rx58u")
+}],
+"loop": false,
+"name": &"death",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_mumht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_cvlkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_i6tu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vatka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_tb0mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_6xt7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_efrpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ssekr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hwn58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_3h60q")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_7bdm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ors3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_knswh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_2t34h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_8m33e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_hqw1n")
+}],
+"loop": false,
+"name": &"take_hit",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8eivg"]
+size = Vector2(16, 48)
+
+[node name="Ranger" type="CharacterBody2D"]
+script = ExtResource("1_fo80h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -43)
+sprite_frames = SubResource("SpriteFrames_u8n2i")
+animation = &"2_atk"
+autoplay = "run"
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8eivg")
+
+[node name="FrontDownCast" type="RayCast2D" parent="."]
+position = Vector2(20, 0)
+
+[node name="FrontArrow" type="Node2D" parent="."]
+position = Vector2(33, -11)
+
+[node name="FrontAttackCheck" type="RayCast2D" parent="."]
+position = Vector2(0, -5)
+target_position = Vector2(200, 0)
+
+[node name="BehindAttackCheck" type="RayCast2D" parent="."]
+position = Vector2(0, -5)
+target_position = Vector2(-200, 0)
+
+[node name="FSM" type="Node" parent="."]
+script = ExtResource("52_v3l0y")
+
+[node name="Run" type="Node" parent="FSM"]
+script = ExtResource("53_3e0jf")
+
+[node name="Attack" type="Node" parent="FSM"]
+script = ExtResource("54_3e0jf")
+
+[node name="TakeHit" type="Node" parent="FSM"]
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="FSM/Attack" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="FSM/Attack" method="_on_animated_sprite_2d_frame_changed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dif34lkk78hcl"]
+
+[ext_resource type="PackedScene" uid="uid://bt888wodd3kcq" path="res://demo_projects/0001-moon_graveyard_platform_jump/scene/game/start/game_start.tscn" id="1_2oc8x"]
+[ext_resource type="Script" uid="uid://bluq4y5m51dj7" path="res://demo_projects/0001-moon_graveyard_platform_jump/scene/main.gd" id="1_sixed"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_sixed")
+
+[node name="Start" parent="." instance=ExtResource("1_2oc8x")]
+
+[connection signal="game_start" from="Start" to="." method="_on_start_game_start"]

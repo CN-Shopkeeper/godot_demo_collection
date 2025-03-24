@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://boxppms4bj0gg"]
+
+[ext_resource type="Script" uid="uid://di6nfvoeyvhvk" path="res://0000-0100/0004-curves/scripts/curve_example.gd" id="1_e1kuw"]
+[ext_resource type="Texture2D" uid="uid://3vexc3a5frf2" path="res://icon.svg" id="2_tvttd"]
+
+[sub_resource type="Curve" id="Curve_tvttd"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="CurveExample" type="Node2D"]
+script = ExtResource("1_e1kuw")
+curve = SubResource("Curve_tvttd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tvttd")

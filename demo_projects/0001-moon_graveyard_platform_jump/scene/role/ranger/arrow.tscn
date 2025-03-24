@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgon44ypg0r16"]
+
+[ext_resource type="Texture2D" uid="uid://wule0tcnko6d" path="res://demo_projects/moon-graveyard_platform-jump/assets/ranger/arrow/arrow_.png" id="1_4xwmm"]
+[ext_resource type="Script" uid="uid://q72c4j7dwxtm" path="res://demo_projects/moon-graveyard_platform-jump/scene/role/ranger/arrow.gd" id="1_ht1nu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ht1nu"]
+size = Vector2(16, 8)
+
+[node name="Arrow" type="Area2D"]
+script = ExtResource("1_ht1nu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4xwmm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 0)
+shape = SubResource("RectangleShape2D_ht1nu")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

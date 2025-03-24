@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0wft3cx081yj"]
+
+[ext_resource type="PackedScene" uid="uid://bauekvr0bmalg" path="res://demo_projects/moon-graveyard_platform-jump/scene/role/player/player.tscn" id="1_won60"]
+[ext_resource type="PackedScene" uid="uid://b7bk8ojnc0jrb" path="res://demo_projects/moon-graveyard_platform-jump/scene/role/knight/knight.tscn" id="2_lfxtw"]
+[ext_resource type="PackedScene" uid="uid://bjj82phfyvmko" path="res://demo_projects/moon-graveyard_platform-jump/scene/role/ranger/ranger.tscn" id="3_sh8oj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfxtw"]
+size = Vector2(269, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh8oj"]
+size = Vector2(1271, 26)
+
+[node name="TestPlayer" type="Node2D"]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(598, 504)
+shape = SubResource("RectangleShape2D_lfxtw")
+
+[node name="Ground2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
+position = Vector2(267, 457)
+shape = SubResource("RectangleShape2D_lfxtw")
+
+[node name="Ground3" type="StaticBody2D" parent="."]
+position = Vector2(639, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground3"]
+position = Vector2(267, 457)
+shape = SubResource("RectangleShape2D_lfxtw")
+
+[node name="Ground4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground4"]
+position = Vector2(555, 574)
+shape = SubResource("RectangleShape2D_sh8oj")
+
+[node name="Player" parent="." instance=ExtResource("1_won60")]
+position = Vector2(491, 301)
+
+[node name="Knight" parent="." instance=ExtResource("2_lfxtw")]
+position = Vector2(223, 389)
+
+[node name="Ranger" parent="." instance=ExtResource("3_sh8oj")]
+position = Vector2(897, 346)

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://t0r2be6hminh"]
+
+[ext_resource type="Script" uid="uid://djko1y6yjgmfw" path="res://demo_projects/moon-graveyard_platform-jump/test/enemy_random.gd" id="1_ka0ov"]
+[ext_resource type="PackedScene" uid="uid://bjj82phfyvmko" path="res://demo_projects/moon-graveyard_platform-jump/scene/role/ranger/ranger.tscn" id="1_l0142"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlpd7"]
+size = Vector2(812, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkd3d"]
+size = Vector2(74, 66)
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_ka0ov")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(598, 504)
+shape = SubResource("RectangleShape2D_jlpd7")
+
+[node name="Ranger" parent="." instance=ExtResource("1_l0142")]
+position = Vector2(552, 312)
+
+[node name="LeftEnemy" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftEnemy"]
+position = Vector2(160, 416)
+shape = SubResource("RectangleShape2D_jkd3d")
+
+[node name="RightEnemy" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightEnemy"]
+position = Vector2(1032, 416)
+shape = SubResource("RectangleShape2D_jkd3d")
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
