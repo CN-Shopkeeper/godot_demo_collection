@@ -4,4 +4,6 @@
 
 ### 效果展示
 
-- [0001-0100](screenshots/results-show_0001-0100.md)
+- [simple demos](results_show.md)
+
+- [demo projects](results_show-demo_projects.md)
