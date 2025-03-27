@@ -9,3 +9,5 @@
 [0004: curves](screenshots/0004-curves.gif)
 
 [0005: ray cast 2d](screenshots/0005-ray_cast_2d.gif)
+
+[0006: polish game animation](screenshots/0006-polish_game_animation.gif)

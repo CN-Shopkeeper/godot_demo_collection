@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn2y28w0hk60h"]
+
+[ext_resource type="Script" uid="uid://bcmtcpicoexni" path="res://0000-0100/0006-polish_game_animation/scenes/cubic/cubic.gd" id="1_a1q8x"]
+[ext_resource type="Texture2D" uid="uid://3vexc3a5frf2" path="res://icon.svg" id="2_4kffd"]
+
+[node name="Cubic" type="Node2D"]
+script = ExtResource("1_a1q8x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4kffd")
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Points"]
+position = Vector2(256, 112)
+
+[node name="Polygon2D" type="Polygon2D" parent="Points/Marker2D"]
+polygon = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
+[node name="Marker2D2" type="Marker2D" parent="Points"]
+position = Vector2(304, 472)
+
+[node name="Polygon2D" type="Polygon2D" parent="Points/Marker2D2"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
+[node name="Marker2D3" type="Marker2D" parent="Points"]
+position = Vector2(784, 472)
+
+[node name="Polygon2D" type="Polygon2D" parent="Points/Marker2D3"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
+[node name="Marker2D4" type="Marker2D" parent="Points"]
+position = Vector2(864, 152)
+
+[node name="Polygon2D" type="Polygon2D" parent="Points/Marker2D4"]
+polygon = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
+[node name="HSlider" type="HSlider" parent="."]
+custom_minimum_size = Vector2(500, 0)
+offset_left = 376.0
+offset_top = 568.0
+offset_right = 876.0
+offset_bottom = 584.0
+max_value = 1.0
+step = 0.01

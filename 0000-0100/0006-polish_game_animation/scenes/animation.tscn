@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=3 uid="uid://dt0rv78lbinbt"]
+
+[ext_resource type="Script" uid="uid://bw0exh5gep33b" path="res://0000-0100/0006-polish_game_animation/scenes/animation.gd" id="1_b7kmb"]
+[ext_resource type="Texture2D" uid="uid://3vexc3a5frf2" path="res://icon.svg" id="1_cwubk"]
+
+[sub_resource type="Animation" id="Animation_847l4"]
+resource_name = "rough_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(100, 100), Vector2(300, 300), Vector2(500, 50), Vector2(700, 400)]
+}
+
+[sub_resource type="Animation" id="Animation_cwubk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(232, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(200, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_b7kmb"]
+resource_name = "cubic_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(100, 100), Vector2(300, 300), Vector2(500, 50), Vector2(700, 400)]
+}
+
+[sub_resource type="Animation" id="Animation_437xd"]
+resource_name = "smooth_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 0, 0, 0, 0),
+"points": PackedFloat32Array(232, 0, 0, 0.0833333, 0, 424, -0.0833333, 0, 0.0833333, 0, 592, -0.0833333, 0, 0.0833333, 0, 856, -0.0833333, 0, 0.0833333, 0, 232, -0.0833333, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 0, 0, 0, 0),
+"points": PackedFloat32Array(200, 0, 0, 0.0833333, 0, 416, -0.0833333, 0, 0.0833333, 0, 152, -0.0833333, 0, 0.0833333, 0, 400, -0.0833333, 0, 0.0833333, 0, 200, -0.0833333, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b7kmb"]
+_data = {
+&"RESET": SubResource("Animation_cwubk"),
+&"cubic_animation": SubResource("Animation_b7kmb"),
+&"rough_animation": SubResource("Animation_847l4"),
+&"smooth_animation": SubResource("Animation_437xd")
+}
+
+[node name="Animation" type="Node2D"]
+script = ExtResource("1_b7kmb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(232, 200)
+texture = ExtResource("1_cwubk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_b7kmb")
+}

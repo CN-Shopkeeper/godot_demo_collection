@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2jctxx13lkuc"]
+
+[ext_resource type="Script" uid="uid://bkytjn3w1jf2k" path="res://0000-0100/0006-polish_game_animation/scenes/lerp/lerp.gd" id="1_ig78r"]
+[ext_resource type="Texture2D" uid="uid://3vexc3a5frf2" path="res://icon.svg" id="2_fssn6"]
+
+[node name="Lerp" type="Node2D"]
+script = ExtResource("1_ig78r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fssn6")
