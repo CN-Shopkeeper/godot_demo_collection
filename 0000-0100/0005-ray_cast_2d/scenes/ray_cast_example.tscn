@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ha7kqsu2ny08"]
+
+[ext_resource type="Script" uid="uid://bk650wh1tnnbl" path="res://0000-0100/0005-ray_cast_2d/scenes/ray_cast_example.gd" id="1_28lcx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_28lcx"]
+font_size = 8
+
+[node name="RayCastExample" type="Node2D"]
+script = ExtResource("1_28lcx")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -40.0
+offset_top = -104.0
+offset_right = 40.0
+offset_bottom = -81.0
+label_settings = SubResource("LabelSettings_28lcx")

@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuxcct7f2fwqr"]
+
+[ext_resource type="PackedScene" uid="uid://bdp71ie4hdk31" path="res://0000-0100/0005-ray_cast_2d/scenes/uav.tscn" id="1_d3vaq"]
+[ext_resource type="PackedScene" uid="uid://ha7kqsu2ny08" path="res://0000-0100/0005-ray_cast_2d/scenes/ray_cast_example.tscn" id="2_8txl5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vn63q"]
+size = Vector2(1152, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3vaq"]
+size = Vector2(24, 600)
+
+[node name="World" type="Node2D"]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(576, 632)
+shape = SubResource("RectangleShape2D_vn63q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
+position = Vector2(576, 12)
+shape = SubResource("RectangleShape2D_vn63q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2(24, 64)
+polygon = PackedVector2Array(0, 320, 448, 320, 448, 128, 256, 128, 256, 256, 0, 256)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground"]
+position = Vector2(12, 324)
+shape = SubResource("RectangleShape2D_d3vaq")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1144, 320)
+shape = SubResource("RectangleShape2D_d3vaq")
+
+[node name="Uav" parent="." instance=ExtResource("1_d3vaq")]
+position = Vector2(577, 551)
+
+[node name="RayCastExample" parent="Uav" instance=ExtResource("2_8txl5")]
+
+[node name="Camera2D" type="Camera2D" parent="Uav"]
+zoom = Vector2(1.5, 1.5)

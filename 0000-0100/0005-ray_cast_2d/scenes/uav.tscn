@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdp71ie4hdk31"]
+
+[ext_resource type="Script" uid="uid://d3wn0gyl1yn65" path="res://0000-0100/0005-ray_cast_2d/scenes/uav.gd" id="1_hl3yy"]
+[ext_resource type="Texture2D" uid="uid://3vexc3a5frf2" path="res://icon.svg" id="1_xercd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hl3yy"]
+size = Vector2(64, 64)
+
+[node name="Uav" type="CharacterBody2D"]
+script = ExtResource("1_hl3yy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xercd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_hl3yy")
