@@ -11,3 +11,5 @@
 [0005: ray cast 2d](screenshots/0005-ray_cast_2d.gif)
 
 [0006: polish game animation](screenshots/0006-polish_game_animation.gif)
+
+[0007: resolution settings menu](screenshots/0007-resolution_settings_menu.gif)
