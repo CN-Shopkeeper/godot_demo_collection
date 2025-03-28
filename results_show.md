@@ -13,3 +13,5 @@
 [0006: polish game animation](screenshots/0006-polish_game_animation.gif)
 
 [0007: resolution settings menu](screenshots/0007-resolution_settings_menu.gif)
+
+[0008: day night cycle](screenshots/0008-day_night_cycle.gif)
