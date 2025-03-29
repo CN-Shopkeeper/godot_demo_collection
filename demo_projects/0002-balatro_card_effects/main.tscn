@@ -1,0 +1,190 @@
+[gd_scene load_steps=13 format=3 uid="uid://1jhijb78a6n5"]
+
+[ext_resource type="Script" uid="uid://npr3u40bttsn" path="res://demo_projects/0002-balatro_card_effects/scripts/destory_area.gd" id="1_ds77u"]
+[ext_resource type="Shader" uid="uid://cfjj65kl7h4ad" path="res://demo_projects/0002-balatro_card_effects/shader/distorted_background.gdshader" id="1_keo86"]
+[ext_resource type="Texture2D" uid="uid://dfdso7e6ouj7q" path="res://demo_projects/0002-balatro_card_effects/assets/Cards/cut_off/clubs_A.png" id="3_0p3uc"]
+[ext_resource type="Texture2D" uid="uid://e5er82rmh5rn" path="res://demo_projects/0002-balatro_card_effects/assets/Cards/cut_off/hearts_A.png" id="3_fp1h5"]
+[ext_resource type="Texture2D" uid="uid://cxbiaerjkl8vj" path="res://demo_projects/0002-balatro_card_effects/assets/Cards/cut_off/diamonds_A.png" id="4_46k6f"]
+[ext_resource type="Script" uid="uid://c3gnl1v3f36h1" path="res://demo_projects/0002-balatro_card_effects/scripts/drawn_cards.gd" id="4_bg38g"]
+[ext_resource type="Shader" uid="uid://cfoyanvjvn2sh" path="res://demo_projects/0002-balatro_card_effects/shader/vhs_crt_monitor_effect.gdshader" id="4_ke5si"]
+[ext_resource type="Texture2D" uid="uid://dbgh5ogayt1qy" path="res://demo_projects/0002-balatro_card_effects/assets/Cards/cut_off/spades_A.png" id="5_mv0yn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ke5si"]
+shader = ExtResource("1_keo86")
+shader_parameter/colour1 = Color(0, 0.286275, 0, 1)
+shader_parameter/colour2 = Color(0, 0.607843, 0, 1)
+shader_parameter/colour3 = Color(0, 0.580392, 0, 1)
+shader_parameter/colour4 = Color(0, 0.541176, 0, 1)
+shader_parameter/contrast = 5
+shader_parameter/gradual = 2.0
+shader_parameter/width1 = 0.04
+shader_parameter/width2 = 0.1
+shader_parameter/scale1 = 10.0
+shader_parameter/scale2 = 1.0
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/intensity = 0.2
+shader_parameter/spin_speed = 0.2
+shader_parameter/spin_amount = 1.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keo86"]
+bg_color = Color(0.85098, 0, 0.176471, 0.576471)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.835294, 0.211765, 0.0745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ke5si"]
+size = Vector2(88, 124)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fp1h5"]
+shader = ExtResource("4_ke5si")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(1152, 648)
+shader_parameter/pixelate = true
+shader_parameter/roll = false
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 4.75e-08
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DistoredBackground" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ke5si")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DestoryArea" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 400.0
+offset_right = 152.0
+offset_bottom = 524.0
+script = ExtResource("1_ds77u")
+
+[node name="Panel" type="Panel" parent="UI/DestoryArea"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_keo86")
+
+[node name="Area2D" type="Area2D" parent="UI/DestoryArea"]
+visible = false
+position = Vector2(43, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/DestoryArea/Area2D"]
+shape = SubResource("RectangleShape2D_ke5si")
+
+[node name="Label" type="Label" parent="UI/DestoryArea"]
+layout_mode = 2
+text = "Destroy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonDraw" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 916.0
+offset_top = 548.0
+offset_right = 1068.0
+offset_bottom = 579.0
+text = "Draw/Undraw"
+
+[node name="Pile" type="Control" parent="UI"]
+anchors_preset = 0
+offset_left = 937.0
+offset_top = 400.0
+offset_right = 977.0
+offset_bottom = 440.0
+
+[node name="TextureRect4" type="TextureRect" parent="UI/Pile"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 18.0
+offset_right = 109.0
+offset_bottom = 142.0
+texture = ExtResource("3_0p3uc")
+
+[node name="TextureRect3" type="TextureRect" parent="UI/Pile"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 102.0
+offset_bottom = 136.0
+texture = ExtResource("4_46k6f")
+
+[node name="TextureRect2" type="TextureRect" parent="UI/Pile"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 95.0
+offset_bottom = 130.0
+texture = ExtResource("5_mv0yn")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Pile"]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 124.0
+texture = ExtResource("3_fp1h5")
+
+[node name="DrawnCards" type="Control" parent="UI" node_paths=PackedStringArray("from", "to")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -68.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_bg38g")
+from = NodePath("../Pile")
+to = NodePath("../DestoryArea")
+
+[node name="PostProcessing" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="PostProcessing"]
+material = SubResource("ShaderMaterial_fp1h5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="area_entered" from="UI/DestoryArea/Area2D" to="UI/DestoryArea" method="_on_area_2d_area_entered"]
+[connection signal="pressed" from="UI/ButtonDraw" to="UI/DrawnCards" method="_on_button_draw_pressed"]

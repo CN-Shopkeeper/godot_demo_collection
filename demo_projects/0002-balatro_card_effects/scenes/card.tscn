@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpfylvss821g5"]
+
+[ext_resource type="Script" uid="uid://ddqo5x75dgffk" path="res://demo_projects/0002-balatro_card_effects/scripts/card.gd" id="1_rh58l"]
+[ext_resource type="Shader" uid="uid://c20ge7f5u46r1" path="res://demo_projects/0002-balatro_card_effects/shader/dissolve.gdshader" id="1_yh653"]
+[ext_resource type="Shader" uid="uid://chxwkywikq7hr" path="res://demo_projects/0002-balatro_card_effects/shader/fake_3d.gdshader" id="2_rh58l"]
+[ext_resource type="Texture2D" uid="uid://bbo5mg2rvtj4o" path="res://demo_projects/0002-balatro_card_effects/assets/Cards/cut_off/spades_8.png" id="3_yh653"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_d54s8"]
+seed = 21
+frequency = 0.005
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cff0w"]
+noise = SubResource("FastNoiseLite_d54s8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b263g"]
+resource_local_to_scene = true
+shader = ExtResource("1_yh653")
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_cff0w")
+shader_parameter/dissolve_value = 0.226
+shader_parameter/burn_size = 0.03
+shader_parameter/burn_color = Color(1, 0.733333, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d54s8"]
+resource_local_to_scene = true
+shader = ExtResource("2_rh58l")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rh58l"]
+size = Vector2(88, 124)
+
+[node name="Card" type="Control"]
+material = SubResource("ShaderMaterial_b263g")
+custom_minimum_size = Vector2(88, 124)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 88.0
+offset_bottom = 124.0
+pivot_offset = Vector2(44, 62)
+size_flags_horizontal = 0
+script = ExtResource("1_rh58l")
+
+[node name="Shadow" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0.631373)
+custom_minimum_size = Vector2(88, 124)
+layout_mode = 0
+offset_top = 24.0
+offset_right = 88.0
+offset_bottom = 148.0
+texture = ExtResource("3_yh653")
+
+[node name="CardTexture" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_d54s8")
+custom_minimum_size = Vector2(88, 124)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 42.0
+texture = ExtResource("3_yh653")
+
+[node name="AreaDescroy" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDescroy"]
+position = Vector2(44, 62)
+shape = SubResource("RectangleShape2D_rh58l")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
